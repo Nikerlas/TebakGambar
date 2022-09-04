@@ -13,6 +13,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     ImageView iv_mobil;
+    ImageView iv_anime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +33,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        iv_anime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SplashAnime.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setInisialisasi(){
+
         iv_mobil=(ImageView) findViewById(R.id.iv_mobil);
+        iv_anime=(ImageView) findViewById(R.id.iv_anime);
     }
 
 }

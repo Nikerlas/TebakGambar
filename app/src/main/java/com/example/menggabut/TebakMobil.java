@@ -32,9 +32,9 @@ public class TebakMobil extends AppCompatActivity {
         Intent cek = getIntent();
         String nama_icon =
                 cek.getStringExtra("nama_icon");
-        if (nama_icon.equals("toyota")) {
+        if (nama_icon.equals("Toyota")) {
             iv_tebak.setImageResource(R.drawable.toyota);
-            jawaban = "toyota";
+            jawaban = "Toyota";
         }
     }
 
@@ -47,6 +47,7 @@ public class TebakMobil extends AppCompatActivity {
                    Intent intent = new Intent(TebakMobil.this, TebakMobil1.class);
                    intent.putExtra("nama_icon", "nissan");
                    startActivity(intent);
+                   finish();
                 }else{
                     Toast.makeText(TebakMobil.this, "Jawaban anda salah!", Toast.LENGTH_SHORT).show();
                 }

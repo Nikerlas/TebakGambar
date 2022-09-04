@@ -20,7 +20,7 @@ public class SplashMobil extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(SplashMobil.this, TebakMobil.class);
-                intent.putExtra("nama_icon", "toyota");
+                intent.putExtra("nama_icon", "Toyota");
                 startActivity(intent);
                 finish();
             }
